@@ -51,10 +51,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W                  &kp E           &kp R     &kp T    &kp LEFT_WIN  &kp Y         &kp U                  &kp I       &kp O       &kp P
-&kp A      &kp S                  &kp D           &kp F     &kp G    &mkp MB3      &kp H         &kp J                  &kp K       &kp L       &kp ENTER
-&kp Z      &kp X                  &kp C           &kp V     &kp B    &mkp MB2      &kp N         &kp M                  &kp COMMA   &kp PERIOD  &kp SLASH
-&kp LCTRL  &lt 1 INTERNATIONAL_5  &kp LEFT_SHIFT  &mkp MB1  &kp TAB  &kp SPACE     &kp LEFT_ALT  &lt 2 INTERNATIONAL_4  &kp ESCAPE
+&kp Q      &kp W  &kp E           &kp R     &kp T    &kp LEFT_WIN  &kp Y         &kp U  &kp I       &kp O       &kp P
+&kp A      &kp S  &kp D           &kp F     &kp G    &mkp MB3      &kp H         &kp J  &kp K       &kp L       &kp ENTER
+&kp Z      &kp X  &kp C           &kp V     &kp B    &mkp MB2      &kp N         &kp M  &kp COMMA   &kp PERIOD  &kp SLASH
+&kp LCTRL  &mo 1  &kp LEFT_SHIFT  &mkp MB1  &kp TAB  &kp SPACE     &kp LEFT_ALT  &mo 2  &kp ESCAPE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -71,9 +71,11 @@
             bindings = <
 &kp LANG_ZENKAKUHANKAKU  &kp UP        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TAB    &kp PAUSE_BREAK  &kp N7        &kp N8        &kp N9        &kp N0     &kp CARET
 &kp LEFT                 &kp DOWN      &kp RIGHT         &kp BACKSPACE      &kp ENTER  &mkp MB3         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &kp EQUAL
-&bt BT_SEL 0             &bt BT_SEL 1  &bt BT_SEL 3      &bt BT_SEL 4       &kp F7     &mkp MB2         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp ASTERISK
-&kp LSHIFT               &none         &kp LEFT_SHIFT    &mkp MB1           &kp PSCRN  &kp RSHIFT       &kp ENTER     &mo LOWER2    &kp RCTRL
+&bt BT_SEL 0             &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_CLR         &kp F7     &mkp MB2         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp ASTERISK
+&mo 3                    &none         &kp LEFT_SHIFT    &mkp MB1           &kp TAB    &kp RSHIFT       &kp ENTER     &mo LOWER2    &kp RCTRL
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -85,11 +87,13 @@
 
         Lower2_layer {
             bindings = <
-&none       &kp COMMA  &kp END    &kp C_VOL_UP  &kp SINGLE_QUOTE  &kp ESC         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PG_UP  &kp LBRC   &kp RBRC
-&kp LC(A)   &kp LC(S)  &kp END    &kp C_VOL_DN  &kp C_MUTE        &kp SCROLLLOCK  &kp BSPC        &kp HOME         &kp PG_DN  &kp END    &kp DEL
-&kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LG(V)     &kp LALT          &kp TAB         &kp APOS        &kp EQUAL        &kp BSLH   &kp GRAVE  &kp INS
-&kp LSHIFT  &kp LCTRL  &none      &kp SPACE     &kp PSCRN         &kp RSHIFT      &kp ENTER       &none            &kp RCTRL
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp ESC     &kp AMPERSAND  &kp SQT               &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE
+&kp F1           &kp F2             &kp F3    &kp F4      &kp F5       &kp K_MUTE  &kp F6         &kp GRAVE             &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DEL
+&kp F7           &kp F8             &kp F9    &kp F10     &kp F11      &kp TAB     &kp F12        &kp NON_US_BACKSLASH  &kp UNDERSCORE        &kp SEMICOLON          &kp COLON
+&kp LSHIFT       &kp LCTRL          &none     &kp SPACE   &kp PSCRN    &kp RSHIFT  &kp ENTER      &none                 &kp RCTRL
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
